@@ -1,7 +1,7 @@
-**ERC-321: Smart Contract Tokenization and Marketplace Standard**  
+**ERC-321: Smart Contract Tokenization and SmartContractId's**  
 A universal interface for the tokenization and exchange of smart contracts  
-**Authors:** [Your Name] ([Your Contact Information])  
-**Created:** [Creation Date]
+**Authors:** Larry Klosowski @ QuFoam Labs 
+**Created:** 02/02/2024
 
 ### Table of Contents
 - Abstract
@@ -22,7 +22,7 @@ The evolving landscape of blockchain and decentralized applications (dApps) unde
 **ERC-321 Interface:**
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.23;
 
 interface ERC321 {
     event ContractInstanceCreated(address indexed instance, uint256 indexed tokenId);
