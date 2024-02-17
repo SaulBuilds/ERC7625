@@ -2,13 +2,10 @@
 /**
  * @title ERC321
  * @author Larry Klosowski @ QuFoamLabs 
- * @notice This contract is a simple example of 
+ * @notice This contract is a simple implementation of 
  * deployment of an ERC321 contract that implements 
  * the 'new' function to create a contract.
  */
-
-
-
 pragma solidity ^0.8.23;
 
 import "../interfaces/IERC321Metadata.sol";

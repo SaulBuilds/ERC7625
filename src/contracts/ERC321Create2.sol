@@ -1,11 +1,18 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.23;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/Create2.sol";
+import "lib/openzeppelin-contracts/contracts/access/Ownable.sol";
+import "lib/openzeppelin-contracts/contracts/utils/Create2.sol";
 import "../interfaces/IERC321Metadata.sol";
-import "./templates/ERC721.sol"; // Assuming this is an ERC721 contract
+import "./templates/ERC721.sol"; 
+/**
+ * @title ERC321
+ * @author Larry Klosowski @ QuFoamLabs 
+ * @notice This contract is a simple implementation of 
+ * deployment of an ERC321 contract that implements 
+ * the 'create2' inheritance to create a contract.
 
+ */
 contract ContractMarketplace is IERC321Metadata, Ownable {
     uint256 private _nextTokenId;
     mapping(uint256 => address) private _contractInstances;
@@ -15,7 +22,6 @@ contract ContractMarketplace is IERC321Metadata, Ownable {
 
 
     constructor() Ownable(msg.sender) {
- 
         _nextTokenId = 0; 
     }
 
